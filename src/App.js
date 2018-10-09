@@ -37,7 +37,9 @@ class App extends Component {
         />
         <br />
         <Button style={this.state.success===true?{color:'green'}:null} onClick={() => {
-          if(this.state.success===false)
+          if(this.state.success===false
+          
+          )
           firebase.database().ref('/').push(this.state.input)
           .then(()=>this.setState({success:true}))
         }}>{this.state.success===false?'Vreau Tema!':'Success! Vei primi tema pe mess in 10 minute maxim!'}</Button>
